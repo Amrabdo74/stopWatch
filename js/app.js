@@ -9,18 +9,17 @@ let myInteral;
 
 start.addEventListener("click", function () {
   myInteral = setInterval(() => {
-    pare.innerHTML = parseInt(pare.innerHTML) + 1;
-
+    pare.innerHTML = parseInt(pare.innerHTML) < 9 ?  "0" + (parseInt(pare.innerHTML)+1) : pare.innerHTML =(parseInt(pare.innerHTML)+1)
     if (pare.innerHTML == 60) {
-      sec.innerHTML = parseInt(sec.innerHTML) + 1;
+      sec.innerHTML = parseInt(sec.innerHTML) < 9 ?  "0" + (parseInt(sec.innerHTML)+1) : sec.innerHTML =(parseInt(sec.innerHTML)+1)
       pare.innerHTML = "00";
     }
     if (sec.innerHTML == 60) {
-      min.innerHTML = parseInt(min.innerHTML) + 1;
+      min.innerHTML = parseInt(min.innerHTML) < 9 ?  "0" + (parseInt(min.innerHTML)+1) : min.innerHTML =(parseInt(min.innerHTML)+1)
       sec.innerHTML = "00";
     }
     if (min.innerHTML == 60) {
-      hours.innerHTML = parseInt(hours.innerHTML) + 1;
+      hours.innerHTML = parseInt(hours.innerHTML) < 9 ?  "0" + (parseInt(hours.innerHTML)+1) : hours.innerHTML =(parseInt(hours.innerHTML)+1)
       min.innerHTML = "00";
     }
   }, 16.6);
